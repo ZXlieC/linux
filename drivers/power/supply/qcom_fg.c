@@ -1316,3 +1316,4 @@ MODULE_AUTHOR("Joel Selvaraj <jo@jsfamily.in>");
 MODULE_AUTHOR("Yassine Oudjana <y.oudjana@protonmail.com>");
 MODULE_DESCRIPTION("Qualcomm PMIC Fuel Gauge Driver");
 MODULE_LICENSE("GPL v2");
+
