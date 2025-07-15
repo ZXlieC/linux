@@ -1139,17 +1139,6 @@ static int clk_gfx3d_src_set_rate_and_parent(struct clk_hw *hw, unsigned long ra
 	return update_config(rcg);
 }
 
-const struct clk_ops clk_gfx3d_src_ops = {
-	.is_enabled = clk_rcg2_is_enabled,
-	.get_parent = clk_rcg2_get_parent,
-	.set_parent = clk_rcg2_set_parent,
-	.recalc_rate = clk_rcg2_recalc_rate,
-	.set_rate = clk_gfx3d_set_rate,
-	.set_rate_and_parent = clk_gfx3d_src_set_rate_and_parent,
-	.determine_rate = clk_gfx3d_src_determine_rate,
-};
-EXPORT_SYMBOL_GPL(clk_gfx3d_src_ops);
-
 
 static int clk_byte2_determine_rate(struct clk_hw *hw,
 				    struct clk_rate_request *req)
@@ -1414,6 +1403,17 @@ static int clk_gfx3d_set_rate(struct clk_hw *hw, unsigned long rate,
 	 */
 	return 0;
 }
+
+const struct clk_ops clk_gfx3d_src_ops = {
+	.is_enabled = clk_rcg2_is_enabled,
+	.get_parent = clk_rcg2_get_parent,
+	.set_parent = clk_rcg2_set_parent,
+	.recalc_rate = clk_rcg2_recalc_rate,
+	.set_rate = clk_gfx3d_set_rate,
+	.set_rate_and_parent = clk_gfx3d_src_set_rate_and_parent,
+	.determine_rate = clk_gfx3d_src_determine_rate,
+};
+EXPORT_SYMBOL_GPL(clk_gfx3d_src_ops);
 
 const struct clk_ops clk_gfx3d_ops = {
 	.is_enabled = clk_rcg2_is_enabled,
