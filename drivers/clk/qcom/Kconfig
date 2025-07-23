@@ -796,17 +796,6 @@ config SDM_GPUCC_660
 	  Say Y if you want to support graphics controller devices and
 	  functionality such as 3D graphics
 
-config SDM_GPUCC_660_LAVENDER
-	tristate "SDM660 Graphics Clock Controller for Xiaomi Redmi Note 7 (xiaomi-lavender)"
-	depends on ARM64 || COMPILE_TEST
-	select SDM_GCC_660
-	select QCOM_GDSC
-	help
-	  Support for the graphics clock controller on SDM660 for Xiaomi Redmi Note 7 (xiaomi-lavender).
-	  Say Y if you want to support graphics controller devices and
-	  functionality such as 3D graphics
-
-
 config QCS_TURING_404
 	tristate "QCS404 Turing Clock Controller"
 	help
